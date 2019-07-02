@@ -1,4 +1,4 @@
-var CURRENT_LANG = 'en'
+var CURRENT_LANG = 'bg'
 var CLASS_LIST_ITEM = 'grid-list-tile'
 var CLASS_ITEM_TITLE = 'fonts-module-title'
 var SEPARATOR = '•'
