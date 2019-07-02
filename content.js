@@ -18,7 +18,13 @@ function updateNode (node) {
   var langElems = node.querySelectorAll('[lang]')
 
   if (titleElem) {
-    titleElem.innerText = titleElem.innerText.split(' ' + SEPARATOR)[0] + ' ' + SEPARATOR + ' ' + CURRENT_LANG.toUpperCase()
+    if (!titleElem.flgfCode) {
+      titleElem.flgfCode = document.createElement('span')
+      titleElem.flgfCode.classList = 'flgf-code'
+      titleElem.appendChild(titleElem.flgfCode)
+    }
+    
+    titleElem.flgfCode.innerHTML = SEPARATOR + ' ' + CURRENT_LANG.toUpperCase()
   }
 
   langElems.forEach(function (elem) {
